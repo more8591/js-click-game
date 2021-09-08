@@ -1,0 +1,106 @@
+/*MENU STYLES*/
+
+body {
+    margin: 0px 0px;
+    text-align: center;
+}
+
+.toggle-off {
+    display: none;
+}
+
+button {
+    background: #515151;
+    border: none;
+    width: 100px;
+    height: 45px;
+    color: white;
+    margin: 10px;
+    letter-spacing: 2;
+}
+
+button:hover {
+    opacity: .7;
+}
+
+ul {
+    list-style: none;
+}
+
+#menu-body {
+    width: 100%;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+    z-index: 15;
+    position: absolute;
+}
+
+
+/*GAME STYLE*/
+
+#gameBody {
+    position: relative;
+    display: none;
+    background: grey;
+    height: 500px;
+    width: 1200px;
+    overflow: hidden;
+}
+
+#lilbro {
+    position: relative;
+    top: 400px;
+    left: -30em;
+}
+
+#obs {
+    position: relative;
+    top: 310px;
+    left: 1100px;
+    animation: obj 2s infinite linear;
+}
+
+#obs>img {
+    width: 10%;
+}
+
+#jackLostImg {
+    position: relative;
+    top: -10vw;
+    display: none;
+    z-index: 50;
+    height: 75em;
+}
+
+
+/*GAME ANIMATION*/
+
+.jumpAni {
+    animation: jump 0.3s;
+}
+
+@keyframes jump {
+    0% {
+        top: 420px;
+    }
+    50% {
+        top: 320px;
+    }
+    100% {
+        top: 420px;
+    }
+}
+
+@keyframes obj {
+    0% {
+        left: 1500px;
+    }
+    100% {
+        left: -1200px;
+    }
+}
