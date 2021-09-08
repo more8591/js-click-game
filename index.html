@@ -21,7 +21,13 @@
         </ul>
     </div>
     <!--GAME ENV-->
-    <div id="gameBody">
+    <div id="gameBody" onclick="jump();">
+        <div id="lp-counter">
+            <div id="lp-container">
+                <p class="lptxt">Life Points</p>
+                <P class="lpnum">4000</P>
+            </div>
+        </div>
         <div id="reactImg">
             <img id="jackLostImg" src="img/lost.png">
         </div>
@@ -31,7 +37,9 @@
         <div id="obs">
             <img src="img/obj02.png">
         </div>
-        <button id="jumpBtn" onclick="jump();">JUMP!</button>
+        <div id="bgMonster">
+            <img src="img/s01.png">
+        </div>
     </div>
 </body>
 <!---MY JS CODE-->

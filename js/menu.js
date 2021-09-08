@@ -1,5 +1,5 @@
 //##### GLOBAL VAR #####//
-jackHp = 5;
+var jackHp = 4000;
 
 //##################//
 //      MENU        //
@@ -34,13 +34,20 @@ function gameCredits() {
 //      GAME MECH        //
 //#######################//
 function jump() {
-    var bro = document.getElementById('lilbro');
+    var bro = document.getElementById('lilbro'),
+        lp = document.getElementsByClassName('lpnum'),
+        e = document.getElementById('lp-container');
 
     if (bro.classList !== 'jumpAni') {
         bro.classList.add('jumpAni');
-        jackHp = jackHp - 1;
+        jackHp = jackHp - 1000;
+        // var dmg = '<p class="lpnum">' + jackHp.toString() + '</p>';
+        // lp.replaceWith(dmg);
+
+    } else {
+        bro.classList.add('dbljumpAni');
     }
     setTimeout(function() {
         bro.classList.remove('jumpAni');
-    }, 300);
+    }, 500);
 }

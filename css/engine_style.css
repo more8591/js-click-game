@@ -16,7 +16,9 @@ button {
     height: 45px;
     color: white;
     margin: 10px;
-    letter-spacing: 2;
+    letter-spacing: 2px;
+    font-size: 10px;
+    text-transform: uppercase;
 }
 
 button:hover {
@@ -46,16 +48,40 @@ ul {
 #gameBody {
     position: relative;
     display: none;
-    background: grey;
     height: 500px;
     width: 1200px;
     overflow: hidden;
+    background: #000 url(https://tinyurl.com/7xn9sz84) repeat-x right;
+}
+
+#lp-counter {
+    position: absolute;
+    right: 10%;
+    top: 7%;
+}
+
+#lp-container {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: white;
+    background: #3d5b8ab3;
+    padding: 1em 2em;
+}
+
+.lpnum {
+    font-weight: bold;
+    font-size: 5em;
+    top: -10px;
+    position: relative;
+    margin: 0;
 }
 
 #lilbro {
     position: relative;
     top: 400px;
-    left: -30em;
+    left: -24em;
 }
 
 #obs {
@@ -77,11 +103,21 @@ ul {
     height: 75em;
 }
 
+#bgMonster {
+    position: relative;
+    top: -15em;
+    animation: summon 10s infinite linear;
+}
+
+#bgMonster>img {
+    width: 35em;
+}
+
 
 /*GAME ANIMATION*/
 
 .jumpAni {
-    animation: jump 0.3s;
+    animation: jump 0.4s;
 }
 
 @keyframes jump {
@@ -89,7 +125,23 @@ ul {
         top: 420px;
     }
     50% {
-        top: 320px;
+        top: 250px;
+    }
+    100% {
+        top: 420px;
+    }
+}
+
+.dbljumpAni {
+    animation: dbljump 0.5s;
+}
+
+@keyframes dbljump {
+    0% {
+        top: 250;
+    }
+    50% {
+        top: 200;
     }
     100% {
         top: 420px;
@@ -102,5 +154,23 @@ ul {
     }
     100% {
         left: -1200px;
+    }
+}
+
+@keyframes summon {
+    0% {
+        left: 1500px;
+    }
+    100% {
+        left: -1200px;
+    }
+}
+
+@keyframes charMove {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: 1500px;
     }
 }
