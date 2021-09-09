@@ -26,8 +26,9 @@ function gameSettings() {
 
 function gameCredits() {
     var ovrlyToggle = document.querySelector('.overlay'),
-        results = ovrlyToggle.classList.remove('toggle-off');
-    return results;
+        creditToggle = document.querySelector('.credit-container');
+    ovrlyToggle.classList.remove('toggle-off');
+    creditToggle.classList.remove('toggle-off');
 }
 
 //#######################//
